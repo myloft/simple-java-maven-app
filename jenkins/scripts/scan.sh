@@ -6,11 +6,11 @@ echo '开源组件健康扫描 Demo'
 echo
 
 echo '项目版本：'
-xmllint --xpath '/*[local-name()="project"]/*[local-name()="version"]/text()' ../../pom.xml
+xmllint --xpath '/*[local-name()="project"]/*[local-name()="version"]/text()' $WORKSPACE/pom.xml
 echo
 echo '开源组件：'
 latest='4.12'
-version=$(xmllint --xpath '/*[local-name()="project"]/*[local-name()="dependencies"]/*[local-name()="dependency"]//*[local-name()="version"]/text()' ../../pom.xml)
+version=$(xmllint --xpath '/*[local-name()="project"]/*[local-name()="dependencies"]/*[local-name()="dependency"]//*[local-name()="version"]/text()' $WORKSPACE/pom.xml)
 printf "1. junit %s\n" "$version"
 echo
 
