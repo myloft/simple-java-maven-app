@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-sudo apt install libxml2-utils -y 
+apk add libxml2 
 echo '开源组件健康扫描 Demo'
 echo
 
