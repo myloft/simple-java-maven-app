@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 apk update
-apk add libxml2 
+apk add libxml2-utils
 echo '开源组件健康扫描 Demo'
 echo
 
