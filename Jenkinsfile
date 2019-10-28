@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Scan') {
             steps {
-                sh './jenkins/scripts/scan.sh'
+                sh 'bash ./jenkins/scripts/scan.sh'
             }
         }
         stage('Build') {
