@@ -6,6 +6,11 @@ pipeline {
         }
     }
     stages {
+        stage('Scan') {
+            steps {
+                sh './jenkins/scripts/scan.sh'
+            }
+        }
         stage('Build') {
             steps {
                 sh 'mvn -B -DskipTests clean package'
